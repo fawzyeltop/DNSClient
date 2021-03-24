@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNS Form</title>
+    <link rel="stylesheet" href="index.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-lg-6 col-12 mx-auto">
+                    <div class="dnsForm bg-light p-3 rounded-lg shadow" id="dnsForm">
+                        <h3 class="text-center">DNS Form with back-end</h3>
+                        <p class="text-center">This is task provided by Sarah. This task that will send the dns records that will be received from the user and send them to the server-side that's created with ExpressJS</p>
+                        <form class="dns" id="dns">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">A</span>
+                                </div>
+                                <input type="text" class="form-control A" placeholder="Address Record(IPv4)">
+                              </div>
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">AAAA</span>
+                                </div>
+                                <input type="text" class="form-control AAAA" placeholder="Address Record(IPv6)">
+                              </div>
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">CNAME</span>
+                                </div>
+                                <input type="text" class="form-control CNAME" placeholder="Canonical Name Record">
+                              </div>
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">MX</span>
+                                </div>
+                                <input type="text" class="form-control MX" placeholder="Mail Exhanger Record">
+                              </div>
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">NS</span>
+                                </div>
+                                <input type="text" class="form-control NS" placeholder="Nameserver Record">
+                              </div>
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">PTR</span>
+                                </div>
+                                <input type="text" class="form-control PTR" placeholder="Pointer Record">
+                              </div>
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">SOA</span>
+                                </div>
+                                <input type="text" class="form-control SOA" placeholder="Start of Authority Record">
+                              </div>
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">SRV</span>
+                                </div>
+                                <input type="text" class="form-control SRV" placeholder="Service Location Record">
+                              </div>
+                              <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">TXT</span>
+                                </div>
+                                <input type="text" class="form-control TXT" placeholder="Text Record">
+                              </div>
+                              <div class="input-group">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="index.js"></script>
+     <!-- Scripts -->
+</body>
+</html>
