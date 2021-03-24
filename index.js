@@ -25,9 +25,17 @@ $(() => {
             const fetchResponse = await fetch(`http://localhost:3000/api/dns/senddata`, settings);
             const data = await fetchResponse.json();
             if(data.statusCode !== 200) {
-                swal({ title: "Status", text: data.message, icon: "error", button: "Close" });
+                var f = '', s = '';
+                for(var i in data.message.errors){
+                    f = i;
+                    s = data.message.errors[i][0];
+                    break;
+                 }
+                swal({ title: data.status, text: `Input ${ f }: ${ s }`, icon: "error", button: "Close" });
+                
             } else {
-                swal({ title: "Status", text: data.message, icon: "success", button: "Close" });
+                swal({ title: data.status, text: data.message, icon: "success", button: "Close" });
+                console.log(data.message);
             }
         } catch (err) {
            console.log(err.message);
