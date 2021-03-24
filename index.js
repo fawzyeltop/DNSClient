@@ -25,9 +25,9 @@ $(() => {
             const fetchResponse = await fetch(`http://localhost:3000/api/dns/senddata`, settings);
             const data = await fetchResponse.json();
             if(data.statusCode !== 200) {
-                swal({ title: "Status", text: "Data are not sent Successfully", icon: "error", button: "Close" });
+                swal({ title: "Status", text: data.message, icon: "error", button: "Close" });
             } else {
-                swal({ title: "Status", text: "Data Sent Successfully", icon: "success", button: "Close" });
+                swal({ title: "Status", text: data.message, icon: "success", button: "Close" });
             }
         } catch (err) {
            console.log(err.message);
